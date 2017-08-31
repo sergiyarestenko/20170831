@@ -1,9 +1,14 @@
 html,body{
   min-height: 100%;
-  font-size:16px;
+  font-size:20px;
+  font-family: sans-serif;
+  *{
+    box-sizing: border-box;
+  }
 }
 
-@mainheigth: 2.5em;
+@mainheigth: 4em;
+@mainwidth: 7em;
 
   ul,ol{
     list-style: none;
@@ -12,44 +17,184 @@ html,body{
   }
 .wrapper{
   margin: 25px;
-  border:1px solid red;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 5;
   ul{
-    li{
+    float: left;
+    >li{
       height: @mainheigth;
-
+      width: auto;
+      position: relative;
       border-bottom: 1px solid #f6f6f6;
+      box-sizing: border-box;
       &:last-child{
         border-bottom: none;
       }
       span{
         display: inline-block;
-        height: @mainheigth;
-        line-height: @mainheigth;
-        width: 5em;
+        height: 100%;
+        padding-top:  ~"calc(@{mainheigth} - 1.6em)";
+        width:5em;
+        text-align: left;
+        font-weight:bold;
       }
     }
     ol{
       display: inline-block;
       position: relative;
-      width: 5em;
-      height: 100%;
-      margin-left:.1em;
-      margin-right:.1em;
-
-      border: 1px solid darkblue;
+      width: @mainwidth;
+      top:~"calc(@{mainheigth} * -1 + 0.7em )";;
+      margin-left:.2em;
+      margin-right:.2em;
       li{
+        white-space: normal ;
         position: absolute;
-        width: 96%;
-        left:2%;
-          &.hour_0_5{
-            height:  ~"calc(@{mainheigth} - .2em)";
-            background: #eee;
-          }
-          &.start_9_3{
-            top:@mainheigth;
+        cursor: pointer;
+        z-index: 10;
+        padding-left:5px;
+
+        &:before{
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          content: "";
+        }
+        >div{
+          width: @mainwidth;
+          display: inline-block;
+          vertical-align: middle;
+          text-align: center;
+
+          p{
+            padding-right: 5px;
+            transition: .5s;
+            &:last-of-type{
+              font-weight:bold;
+            }
           }
         }
-
+          &.hour_05{
+             height:  ~"calc(@{mainheigth} - .4em)";
+           }
+          &.hour_10{
+            height:  ~"calc(@{mainheigth} * 2 - .4em)";
+          }
+          &.hour_15{
+             height:  ~"calc(@{mainheigth} * 3 - .4em)";
+           }
+          &.hour_20{
+            height:  ~"calc(@{mainheigth} * 4 - .4em)";
+          }
+          &.hour_25{
+             height:  ~"calc(@{mainheigth} * 5 - .4em)";
+           }
+          &.hour_30{
+            height:  ~"calc(@{mainheigth} * 6 - .4em)";
+          }
+          &.hour_35{
+             height:  ~"calc(@{mainheigth} * 7 - .4em)";
+           }
+          &.hour_40{
+            height:  ~"calc(@{mainheigth} * 8 - .4em)";
+          }
+          &.hour_45{
+             height:  ~"calc(@{mainheigth} * 9 - .4em)";
+           }
+          &.hour_50{
+            height:  ~"calc(@{mainheigth} * 10 - .4em)";
+          }
+          &.hour_55{
+             height:  ~"calc(@{mainheigth} * 11 - .4em)";
+           }
+          &.hour_60{
+            height:  ~"calc(@{mainheigth} * 12 - .4em)";
+          }
+          &.hour_65{
+             height:  ~"calc(@{mainheigth} * 13 - .4em)";
+           }
+          &.hour_70{
+            height:  ~"calc(@{mainheigth} * 14 - .4em)";
+          }
+          &.hour_75{
+            height:  ~"calc(@{mainheigth} * 15 - .4em)";
+          }
+          &.hour_80{
+            height:  ~"calc(@{mainheigth} * 16 - .4em)";
+          }
+          &.hour_85{
+            height:  ~"calc(@{mainheigth} * 17 - .4em)";
+          }
+          &.hour_90{
+            height:  ~"calc(@{mainheigth} * 18 - .4em)";
+          }
+          &.start_9_00{
+            top:.1em;
+          }
+          &.start_9_30{
+            top:~"calc(@{mainheigth} + .2em)";;
+          }
+          &.start_10_00{
+            top:~"calc(@{mainheigth} * 2 + .2em)";;
+          }
+           &.start_10_30{
+              top:~"calc(@{mainheigth} * 3 + .2em)";;
+            }
+           &.start_11_00{
+              top:~"calc(@{mainheigth} * 4 + .2em)";;
+            }
+           &.start_11_30{
+              top:~"calc(@{mainheigth} * 5 + .2em)";;
+            }
+           &.start_12_00{
+              top:~"calc(@{mainheigth} * 6 + .2em)";;
+            }
+           &.start_12_30{
+              top:~"calc(@{mainheigth} * 7 + .2em)";;
+            }
+           &.start_13_00{
+              top:~"calc(@{mainheigth} * 8 + .2em)";;
+            }
+           &.start_13_30{
+              top:~"calc(@{mainheigth} * 9 + .2em)";;
+            }
+           &.start_14_00{
+              top:~"calc(@{mainheigth} * 10 + .2em)";;
+            }
+           &.start_14_30{
+              top:~"calc(@{mainheigth} * 11 + .2em)";;
+            }
+           &.start_15_00{
+              top:~"calc(@{mainheigth} * 12 + .2em)";;
+            }
+           &.start_15_30{
+              top:~"calc(@{mainheigth} * 13 + .2em)";;
+            }
+           &.start_16_00{
+              top:~"calc(@{mainheigth} * 14 + .2em)";;
+            }
+           &.start_16_30{
+              top:~"calc(@{mainheigth} * 15 + .2em)";;
+            }
+           &.start_17_00{
+              top:~"calc(@{mainheigth} * 16 + .2em)";;
+            }
+           &.start_17_30{
+              top:~"calc(@{mainheigth} * 17 + .2em)";;
+            }
+           &.available{
+              background: #f6f6f6;
+             &:hover{
+               background: #d1e9c6;
+             }
+            }
+           &.available-provider{
+              background: #d3e0f1;
+            }
+           &.booked{
+             background: #dad2ce;
+           }
+        }
       }
     }
   }
