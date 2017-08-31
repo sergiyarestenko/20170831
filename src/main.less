@@ -1,0 +1,55 @@
+html,body{
+  min-height: 100%;
+  font-size:16px;
+}
+
+@mainheigth: 2.5em;
+
+  ul,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.wrapper{
+  margin: 25px;
+  border:1px solid red;
+  ul{
+    li{
+      height: @mainheigth;
+
+      border-bottom: 1px solid #f6f6f6;
+      &:last-child{
+        border-bottom: none;
+      }
+      span{
+        display: inline-block;
+        height: @mainheigth;
+        line-height: @mainheigth;
+        width: 5em;
+      }
+    }
+    ol{
+      display: inline-block;
+      position: relative;
+      width: 5em;
+      height: 100%;
+      margin-left:.1em;
+      margin-right:.1em;
+
+      border: 1px solid darkblue;
+      li{
+        position: absolute;
+        width: 96%;
+        left:2%;
+          &.hour_0_5{
+            height:  ~"calc(@{mainheigth} - .2em)";
+            background: #eee;
+          }
+          &.start_9_3{
+            top:@mainheigth;
+          }
+        }
+
+      }
+    }
+  }
