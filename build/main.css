@@ -55,17 +55,12 @@ ol {
   cursor: pointer;
   z-index: 10;
   padding-left: 5px;
-}
-.wrapper ul ol li:before {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .wrapper ul ol li > div {
-  width: 7em;
-  display: inline-block;
-  vertical-align: middle;
+  margin: auto;
   text-align: center;
 }
 .wrapper ul ol li > div p {
