@@ -1,0 +1,10 @@
+Create similar timeline
+
+- fully responsive for all screen down to 320
+- anticipate changing height of timeline tab
+- anticipate increasing number of time row and timeline tabs (overflow scrolls in psd)
+- anticipate changing colors
+- anticipate changing text length
+
+not needed js
+
